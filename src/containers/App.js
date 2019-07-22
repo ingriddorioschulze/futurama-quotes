@@ -2,47 +2,35 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { search } from "../actions.js";
 import Logo from "../components/Logo";
 import Search from "../components/Search";
 import Scroll from "../components/Scroll";
-import { setSearchField } from "../actions.js";
 import Characters from "../components/Characters";
 import "../style.css";
 
 const mapStateToProps = state => {
   return {
-    searchField: state.searchField
+    characters: state.characters
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSearchChange: e => dispatch(setSearchField(e.target.value))
+    search(text) {
+      dispatch(search(text));
+    }
   };
 };
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      characters: [],
-      quotes: []
-    };
-  }
-
   render() {
-    const { searchField, onSearchChange } = this.props;
-    const filteredCharacters = characters.filter(character => {
-      return character.name.toLowerCase().includes(searchField.toLowerCase());
-    });
-    return !characters.length ? (
-      <h1>loading...</h1>
-    ) : (
+    return (
       <div className="app">
         <Logo />
-        <Search searchChange={onSearchChange} />
+        <Search onChange={this.props.search} />
         <Scroll>
-          <Characters characters={filteredCharacters} />
+          <Characters characters={this.props.characters} />
         </Scroll>
       </div>
     );

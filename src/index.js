@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { reducer } from "./reducer";
 import { createStore, applyMiddleware } from "redux";
-import { createLogger } from "redux-logger";
+import reduxPromise from "redux-promise";
 import App from "./containers/App";
-import { searchCharacters } from "./reducer";
 import * as serviceWorker from "./serviceWorker";
 
-const logger = createLogger();
-const store = createStore(searchCharacters, applyMiddleware(logger));
+const store = createStore(reducer, applyMiddleware(reduxPromise));
 
 ReactDOM.render(
   <Provider store={store}>

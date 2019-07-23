@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { search } from "../actions.js";
+import { search, loadQuotes } from "../actions.js";
 import Logo from "../components/Logo";
 import Search from "../components/Search";
 import Scroll from "../components/Scroll";
@@ -19,6 +19,10 @@ const mapDispatchToProps = dispatch => {
   return {
     search(text) {
       dispatch(search(text));
+    },
+    showQuotes(characterName) {
+      console.log("loading quotes", characterName);
+      dispatch(loadQuotes(characterName));
     }
   };
 };
@@ -28,9 +32,12 @@ class App extends Component {
     return (
       <div className="app">
         <Logo />
-        <Search onChange={this.props.search} />
+        <Search searchChange={this.props.search} />
         <Scroll>
-          <Characters characters={this.props.characters} />
+          <Characters
+            showQuotes={this.props.showQuotes}
+            characters={this.props.characters}
+          />
         </Scroll>
       </div>
     );

@@ -14,13 +14,15 @@ export function search(name) {
     });
 }
 
-// export function quotes(quotes) {
-//   return axios
-//     .get(`https://futuramaapi.herokuapp.com/api/characters/${quotes.name}`)
-//     .then(response => {
-//       return {
-//         type: "QUOTES_DATA",
-//         data: response.data
-//       };
-//     });
-// }
+export function loadQuotes(characterName) {
+  console.log("loading quotes from API", characterName);
+  return axios
+    .get(`https://futuramaapi.herokuapp.com/api/characters/${characterName}`)
+    .then(response => {
+      console.log("got quotes from the API");
+      return {
+        type: "QUOTES_DATA",
+        data: response.data
+      };
+    });
+}

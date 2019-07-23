@@ -9,7 +9,7 @@ const Search = ({ searchChange }) => {
         className="search-input"
         type="search"
         placeholder="search"
-        onChange={searchChange}
+        onChange={e => searchChange(e.target.value)}
       />
     </div>
   );

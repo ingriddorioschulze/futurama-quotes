@@ -3,9 +3,15 @@
 import React from "react";
 
 const Characters = props => {
+  // props.showQuotes("bender");
   return (
-    <div className="characters">
-      <div className="name">{props.name}</div>
+    <div className="characters-container">
+      {props.characters.map(character => (
+        <div className="character" key={character.Name}>
+          <div className="character-name">{character.Name}</div>
+          <img src={character.PicUrl} alt="futurama character" />
+        </div>
+      ))}
     </div>
   );
 };

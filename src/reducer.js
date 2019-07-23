@@ -14,6 +14,11 @@ export function reducer(state = INITIAL_STATE, action) {
       ...state,
       quotes: action.data
     };
+  } else if (action.type === "CLOSE_QUOTES") {
+    return {
+      ...state,
+      quotes: null
+    };
   } else {
     return state;
   }

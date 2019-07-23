@@ -26,3 +26,9 @@ export function loadQuotes(characterName) {
       };
     });
 }
+
+export function closeQuotes() {
+  return {
+    type: "CLOSE_QUOTES"
+  };
+}

@@ -67,12 +67,6 @@ body {
   text-align: center;
 }
 
-.description {
-  font-size: 18px;
-  margin: 10px;
-  text-align: center;
-}
-
 ::placeholder {
   font-family: Saira Extra Condensed;
   font-size: 15px;

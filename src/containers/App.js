@@ -23,6 +23,9 @@ const mapDispatchToProps = dispatch => {
     showQuotes(characterName) {
       console.log("loading quotes", characterName);
       dispatch(loadQuotes(characterName));
+    },
+    loadQuotes(name) {
+      dispatch(loadQuotes(name));
     }
   };
 };
@@ -37,6 +40,7 @@ class App extends Component {
           <Characters
             showQuotes={this.props.showQuotes}
             characters={this.props.characters}
+            loadQuotes={this.props.loadQuotes}
           />
         </Scroll>
       </div>

@@ -7,11 +7,13 @@ import Logo from "../components/Logo";
 import Search from "../components/Search";
 import Scroll from "../components/Scroll";
 import Characters from "../components/Characters";
+import Quotes from "../components/Quotes";
 import "../style.css";
 
 const mapStateToProps = state => {
   return {
-    characters: state.characters
+    characters: state.characters,
+    quotes: state.quotes
   };
 };
 
@@ -20,10 +22,7 @@ const mapDispatchToProps = dispatch => {
     search(text) {
       dispatch(search(text));
     },
-    showQuotes(characterName) {
-      console.log("loading quotes", characterName);
-      dispatch(loadQuotes(characterName));
-    },
+
     loadQuotes(name) {
       dispatch(loadQuotes(name));
     }
@@ -36,9 +35,9 @@ class App extends Component {
       <div className="app">
         <Logo />
         <Search searchChange={this.props.search} />
+        {this.props.quotes && <Quotes quotes={this.props.quotes} />}
         <Scroll>
           <Characters
-            showQuotes={this.props.showQuotes}
             characters={this.props.characters}
             loadQuotes={this.props.loadQuotes}
           />

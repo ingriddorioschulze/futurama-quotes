@@ -1,5 +1,4 @@
 const INITIAL_STATE = {
-  searchField: "",
   characters: [],
   quotes: null
 };
@@ -9,6 +8,11 @@ export function reducer(state = INITIAL_STATE, action) {
     return {
       ...state,
       characters: action.data
+    };
+  } else if (action.type === "QUOTES_DATA") {
+    return {
+      ...state,
+      quotes: action.data
     };
   } else {
     return state;

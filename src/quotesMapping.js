@@ -1,5 +1,5 @@
 export const quotesMapping = {
-  "Bender Bending Rodriguez": "Bender",
+  "Bender Bending Rodríguez": "Bender",
   "Philip J. Fry": "Fry",
   "Turanga Leela": "Leela",
   "Hubert J. Farnsworth": "Professor-Farnsworth",

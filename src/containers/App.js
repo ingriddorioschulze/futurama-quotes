@@ -1,4 +1,4 @@
-/** This container component is meant to connect the other four components.  */
+/** This container component is meant to connect the other six components.  */
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
@@ -48,12 +48,12 @@ class App extends Component {
             loadQuotes={this.props.loadQuotes}
           />
         </Scroll>
-        <footer className="copyright">
-          © 2019 Futurama Quotes | made with{" "}
-          <span role="img" aria-label="sparkling heart">
-            💖
-          </span>{" "}
-          by Ingrid do Rio Schulze
+        <footer>
+          © 2019 Futurama Quotes | made with
+          <span role="img" aria-label="black heart">
+            &nbsp;🖤&nbsp;
+          </span>
+          &nbsp;by Ingrid do Rio Schulze
         </footer>
       </div>
     );

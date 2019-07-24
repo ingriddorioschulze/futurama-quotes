@@ -12,8 +12,6 @@ const QuotesButton = ({ character, loadQuotes }) => {
       </button>
     );
   } else {
-    console.log(character.Name, mappedName);
-
     return <span className="no-quotes">no quotes :(</span>;
   }
 };

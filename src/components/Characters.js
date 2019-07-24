@@ -2,6 +2,7 @@
 
 import React from "react";
 import QuotesButton from "../components/QuotesButton";
+import "../components/Characters.css";
 
 const Characters = props => {
   return (

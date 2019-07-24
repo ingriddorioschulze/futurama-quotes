@@ -10,6 +10,5 @@ export const quotesMapping = {
   "Linda van Schoonhoven": "Linda-the-reporter",
   "Bob Barker's head": "Bob-Barker",
   "Hermes Conrad": "Hermes",
-  "Kif Kroker": "Kif",
-  Donbot: "Don-bot"
+  "Kif Kroker": "Kif"
 };

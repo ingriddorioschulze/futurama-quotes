@@ -1,0 +1,11 @@
+.btn {
+  /* background: #e34147; */
+  width: 60px;
+  border: solid 2px black;
+  font-size: 15px;
+}
+
+.no-quotes {
+  font-size: 15px;
+  text-align: center;
+}

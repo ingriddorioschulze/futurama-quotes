@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family: Saira Extra Condensed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #18abc8;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+::placeholder {
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* .footer {
+
+} */

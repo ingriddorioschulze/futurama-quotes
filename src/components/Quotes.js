@@ -1,6 +1,7 @@
 /** This component is meant to display a modal with the quotes from one character.  */
 
 import React from "react";
+import "../components/Quotes.css";
 
 const Quotes = props => {
   return (
@@ -9,11 +10,16 @@ const Quotes = props => {
         <div className="modal-close" onClick={props.close}>
           &times;
         </div>
-        {props.quotes.map(quote => (
-          <div className="quote" key={quote.quote}>
-            <div>‣ {quote.quote}</div>
-          </div>
-        ))}
+        <div className="quotes-container">
+          {props.quotes.map(quote => (
+            <div className="quote" key={quote.quote}>
+              ‣ {quote.quote}
+            </div>
+          ))}
+        </div>
+        <button className="btn" onClick={props.close}>
+          back
+        </button>
       </div>
     </div>
   );

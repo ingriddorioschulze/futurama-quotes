@@ -1,0 +1,36 @@
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background: #72e49f;
+  padding: 40px;
+  margin: 40px;
+  border: solid 4px black;
+}
+
+.character:hover {
+  box-shadow: 0 8px 16px black;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  margin: 15px;
+  object-fit: contain;
+  object-position: center;
+  padding: 5px;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}

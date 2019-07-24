@@ -8,7 +8,7 @@ import Search from "../components/Search";
 import Scroll from "../components/Scroll";
 import Characters from "../components/Characters";
 import Quotes from "../components/Quotes";
-import "../style.css";
+import "../containers/App.css";
 
 const mapStateToProps = state => {
   return {
@@ -48,6 +48,13 @@ class App extends Component {
             loadQuotes={this.props.loadQuotes}
           />
         </Scroll>
+        <footer className="copyright">
+          © 2019 Futurama Quotes | made with{" "}
+          <span role="img" aria-label="sparkling heart">
+            💖
+          </span>{" "}
+          by Ingrid do Rio Schulze
+        </footer>
       </div>
     );
   }

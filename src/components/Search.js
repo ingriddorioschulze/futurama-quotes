@@ -1,6 +1,7 @@
 /** This component is meant to display a search field and execute the search for characters.  */
 
 import React from "react";
+import "../components/Search.css";
 
 const Search = ({ searchChange }) => {
   return (

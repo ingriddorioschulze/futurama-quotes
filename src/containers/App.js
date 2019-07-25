@@ -48,13 +48,6 @@ class App extends Component {
             loadQuotes={this.props.loadQuotes}
           />
         </Scroll>
-        <footer>
-          © 2019 Futurama Quotes | made with
-          <span role="img" aria-label="black heart">
-            &nbsp;🖤&nbsp;
-          </span>
-          &nbsp;by Ingrid do Rio Schulze
-        </footer>
       </div>
     );
   }

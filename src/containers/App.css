@@ -21,15 +21,3 @@ body {
   color: black;
   font-weight: bold;
 }
-
-footer {
-  display: flex;
-  background: #e34147;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}

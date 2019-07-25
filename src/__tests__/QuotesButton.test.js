@@ -1,16 +1,38 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, configure } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import QuotesButton from "../components/QuotesButton.js";
 
-describe("Button", () => {
-  const mockFn = jest.fn();
-  it("should be defined", () => {
-    expect(QuotesButton).toBeDefined();
-  });
-  it("should render correctly", () => {
-    const tree = shallow(
-      <QuotesButton name="button test" handleClick={mockFn} />
+configure({ adapter: new Adapter() });
+
+describe("QuotesButton", () => {
+  const loadQuotesMock = jest.fn();
+
+  it("renders the button when there is a mapping and calls the loadQuotes function when clicked", () => {
+    const character = {
+      Name: "Turanga Leela"
+    };
+    const wrapper = shallow(
+      <QuotesButton character={character} loadQuotes={loadQuotesMock} />
     );
-    expect(tree).toMatchSnapshot();
+    const button = wrapper.find(".btn");
+    expect(
+      button.matchesElement(<button className="btn">Quotes</button>)
+    ).toEqual(true);
+
+    button.simulate("click");
+    expect(loadQuotesMock).toHaveBeenCalledWith("Leela");
+  });
+
+  it("does not render the button when there is no mapping for the character", () => {
+    const character = {
+      Name: "Morbo"
+    };
+    const wrapper = shallow(
+      <QuotesButton character={character} loadQuotes={loadQuotesMock} />
+    );
+    expect(
+      wrapper.contains(<span className="no-quotes">no quotes :(</span>)
+    ).toEqual(true);
   });
 });

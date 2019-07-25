@@ -1,3 +1,5 @@
+/** This component is meant to display a button when the characters has quotes available.  */
+
 import React from "react";
 import { quotesMapping } from "../quotesMapping.js";
 import "../components/QuotesButton.css";

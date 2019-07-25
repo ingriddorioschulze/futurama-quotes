@@ -20,7 +20,6 @@ For the characters that have available quotes a button will be displayed. Clicki
 
 - React
 - Redux
-- Express.js
 
 # instructions
 

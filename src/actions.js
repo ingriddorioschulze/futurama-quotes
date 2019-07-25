@@ -6,7 +6,6 @@ export function search(name) {
       params: { search: name }
     })
     .then(response => {
-      console.log(response);
       return {
         type: "SEARCH_DATA",
         data: response.data
@@ -15,11 +14,9 @@ export function search(name) {
 }
 
 export function loadQuotes(characterName) {
-  console.log("loading quotes from API", characterName);
   return axios
     .get(`https://futuramaapi.herokuapp.com/api/characters/${characterName}`)
     .then(response => {
-      console.log("got quotes from the API");
       return {
         type: "QUOTES_DATA",
         data: response.data

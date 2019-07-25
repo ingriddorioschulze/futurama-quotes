@@ -1,4 +1,4 @@
-/** This component is meant to display the main logo in the page.  */
+/** This component is meant to display the main logo in the landing page.  */
 
 import React from "react";
 import "../components/Logo.css";

@@ -46,3 +46,7 @@ For the characters that have available quotes a button will be displayed. Clicki
 
 - Futurama API
   https://futuramaapi.herokuapp.com/
+
+#
+
+with :yellow_heart: by [Ingrid do Rio Schulze](https://github.com/ingriddorioschulze)
